@@ -1,0 +1,56 @@
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.submitButton {
+    padding: 10px;
+    background-color: #002D72;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #004b8d;
+}
+
+.toggleButton {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: transparent;
+    color: #002D72;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.toggleButton:hover {
+    color: #004b8d;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}

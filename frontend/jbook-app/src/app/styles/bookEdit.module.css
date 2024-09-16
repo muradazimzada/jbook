@@ -1,0 +1,72 @@
+.bookEditContainer {
+    max-width: 500px; /* Modal genişliğini sınırla */
+    width: 100%; /* Konteyner içinde tam genişlik al */
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.inputField {
+    width: 100%; /* Inputların tam genişliğe sahip olmasını sağla */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Padding genişlik hesaplamalarına dahil olsun */
+}
+
+textarea.inputField {
+    width: 100%; /* Textarea genişliği de tam genişlik olsun */
+    height: 150px;
+    resize: vertical;
+}
+
+.saveButton {
+    display: inline-block; /* Butonu inline hale getir */
+    width: auto; /* Genişlik butonun içeriğine bağlı olsun */
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.saveButton:hover {
+    background-color: #45a049;
+}
+
+
+.successMessage {
+    color: green;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.errorMessage {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}

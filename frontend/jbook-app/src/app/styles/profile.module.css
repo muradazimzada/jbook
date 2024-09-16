@@ -1,0 +1,55 @@
+/* profile.module.css */
+
+.profileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+
+}
+
+.profileCard {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: left;
+}
+
+.profileCard p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.profileCard strong {
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .profileCard {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .profileCard p {
+        font-size: 1rem;
+    }
+}
+.listStyle {
+    list-style: none;
+}

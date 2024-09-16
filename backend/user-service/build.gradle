@@ -1,0 +1,61 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.3'
+	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.jetbrains.kotlin.jvm'
+}
+
+group = 'edu.jhu'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+ext {
+	set('springCloudVersion', "2023.0.3")
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"  // Choose the appropriate version based on your Spring Boot version
+	}
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	implementation 'org.springframework.security:spring-security-config:6.3.3'
+	implementation 'org.springframework.boot:spring-boot-starter-security'     // For Spring Security (includes UserDetailsService)
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+//	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5' // JWT library
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5' // For JSON serialization/deserialization
+	implementation 'org.springframework.boot:spring-boot-starter-validation' // For @Valid annotation
+	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

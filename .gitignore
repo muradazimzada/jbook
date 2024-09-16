@@ -1,0 +1,23 @@
+# Node.js specific (frontend)
+node_modules/
+.next/
+dist/
+out/
+
+# IDE specific
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Operating system specific
+.DS_Store
+Thumbs.db
+
+# Ignore build output directories (general)
+build/
+target/
+
+# Docker related
+docker-compose.override.yml

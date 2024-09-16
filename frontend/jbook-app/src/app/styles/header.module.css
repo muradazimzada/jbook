@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 40px;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navList {
+    list-style-type: none; /* Removes bullet points */
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navItem {
+    margin: 0 15px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    list-style: none;
+}
+
+.rightAligned {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push right-aligned items to the right */
+}
+
+/* Add this new class for the right-aligned list */
+.navRight {
+    list-style-type: none; /* Removes bullet points */
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
