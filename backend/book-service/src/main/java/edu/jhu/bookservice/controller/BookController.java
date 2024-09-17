@@ -79,4 +79,15 @@ public class BookController {
             return ResponseEntity.status(403).build();
         }
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteBook(@RequestHeader("Authorization") String authorizationHeader, @PathVariable Long id) {
+        Long userId = tokenUtility.getUserFromToken(authorizationHeader).getId();
+        if(bookService.isUserAuthorizedToEdit( userId, id)) {
+            bookService.deleteBook(id);
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.status(403).build();
+        }
+    }
 }

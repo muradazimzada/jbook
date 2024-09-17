@@ -77,3 +77,8 @@ export const updateBook = async (id: number, bookData: Book) => {
     const response = await api.put(`/books/${id}`, bookData);
     return response.data;
 };
+
+export const deleteBook = async (id: number) => {
+    const response = await api.delete(`/books/${id}`);
+    return response.data;
+}

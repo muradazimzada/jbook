@@ -21,4 +21,6 @@ public interface BookService {
     BookDetailsDto updateBook(Long bookId, BookUpdateDto bookCreateDto);
 
     boolean isUserAuthorizedToEdit(Long userId, Long bookId) ;
+
+    void deleteBook(Long bookId);
 }

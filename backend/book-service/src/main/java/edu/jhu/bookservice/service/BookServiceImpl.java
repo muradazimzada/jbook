@@ -189,4 +189,7 @@ public class BookServiceImpl implements BookService {
 
         return userId.equals(createdById);
     }
+    public void deleteBook(Long bookId) {
+        bookRepository.deleteById(bookId);
+    }
 }

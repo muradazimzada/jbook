@@ -64,3 +64,24 @@
 .createButton:hover {
     background-color: #45a049; /* Darker green on hover */
 }
+
+
+.deleteButton {
+    background-color: #ff4d4f; /* Red color for delete */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #d9363e; /* Darker red on hover */
+}
+
+.deleteButton:active {
+    background-color: #b71c1c; /* Even darker red on click */
+}
