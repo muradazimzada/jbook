@@ -72,12 +72,6 @@ with 3 auto-generated books that should be seen on My Books page.
 ## Option 2: Create your Account 
  Enter email and password to register, then use the same credentials to use app's functionalities.
 
-### 4. Nginx proxy servers
-
-The Nginx gateway forwards API requests to the backend services:
-- **User Service**: Port 8081
-- **Book Service**: Port 8082
-
 
 ## Useful Commands
 
